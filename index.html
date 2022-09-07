@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Slider Vanilla JS</title>
+</head>
+<body>
+    <main>
+        <section class="slider-container">
+            <article class="slider-container--slides">
+                <figure class="slide active">
+                    <img src="https://placeimg.com/640/480/people" alt="Image of">
+                    <figcaption>is a image of ...</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="https://placeimg.com/640/480/animals" alt="image of">
+                    <figcaption>is a image of</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="https://placeimg.com/640/480/nature" alt="image of">
+                    <figcaption>is a image of</figcaption>
+                </figure>
+            </article>
+            <article class="slider-container--footer">
+                <div class="slider-container--indicator">
+                    <button class="arrow prev"><span class="left"></span></button>
+                    <div><span class="numbers"></span></div>
+                    <button class="arrow next"><span class="right"></span></button>
+                </div>
+                <button class="slider-container-fs--button">
+                    <span class="fs-in--icon"></span>
+                    <span class="fs-out--icon"></span>
+                </button>
+            </article>
+        </section>
+    </main>
+    <script src="code.js"></script>
+</body>
+</html>
+
