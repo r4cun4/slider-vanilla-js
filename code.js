@@ -138,7 +138,7 @@ function slider() {
 
   fullScreenBtn.addEventListener( 'click', e => {
 
-    if(e.target.matches( '.fs-in--icon, .fs-out--icon' )) {
+    if(e.target.matches( '.slider-container-fs--button, .fs-in--icon, .fs-out--icon' )) {
 
       toggleFullscreen( sliderContainer );
 

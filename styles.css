@@ -36,8 +36,8 @@ img {
 }
 
 figcaption {
-    align-self: flex-start;
-    padding: 10px 0 0 15%;
+    align-self: center;
+    padding: 10px 0;
     font-weight: 100;
 }
 
@@ -109,8 +109,8 @@ figcaption {
 
 .slider-container-fs--button {
     position: absolute;
-    right: 0;
-    bottom: 0px;
+    right: 10px;
+    bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -241,6 +241,3 @@ figcaption {
 .fullscreen:fullscreen .slider-container-fs--button > span:after {
     background: #2596be;
 }
-
-
-
