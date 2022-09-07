@@ -37,7 +37,7 @@ img {
 
 figcaption {
     align-self: flex-start;
-    padding: 10px 0 0 60px;
+    padding: 10px 0 0 15%;
     font-weight: 100;
 }
 
@@ -110,12 +110,12 @@ figcaption {
 .slider-container-fs--button {
     position: absolute;
     right: 0;
-    bottom: -5px;
+    bottom: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin: 0 0 0.5em 0;
     border: 1px solid #2596be;
     border-radius: 3rem;
@@ -184,6 +184,10 @@ figcaption {
 
 .fullscreen:fullscreen img {
     width: 70%;
+}
+
+.fullscreen:fullscreen figcaption {
+    color: #fff;
 }
 
 .fullscreen:fullscreen .slider-container--indicator {

@@ -83,7 +83,7 @@ function toggleFullscreen( div ) {
   } else {
 
     div.classList.add( 'fullscreen' );
-    div.requestFullscreen().catch(( e ) => {
+    div.webkitRequestFullscreen().catch(( e ) => {
       console.log(e);
 
     });
