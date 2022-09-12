@@ -70,6 +70,55 @@ function goNext( sliderProps, slide, direction ) {
 }
 //next()
 
+function handleButtonPrev( sliderProps, slide, direction) {
+
+  return (e) => {
+
+    if ( slide > 0 ) {
+
+      slide --;
+      direction -= 100;
+
+    }
+
+    goPrev( sliderProps, slide, direction )
+
+  }
+
+}
+
+//handleButtonPrev
+
+function handleButtonNext(sliderProps, slide, direction) {
+
+  return (e) => {
+
+    slide ++;
+    direction += 100;
+
+    goNext( sliderProps, slide, direction )
+
+  }
+
+}
+//handleButtonNext
+
+function handleButtonFullscreen( sliderProps ) {
+
+  return (e) => {
+
+    toggleFullscreen( sliderProps )
+
+  }
+
+  // if(event.target.matches( '.slider-container-fs--button, .fs-in--icon, .fs-out--icon' )) {
+
+  //   toggleFullscreen( sliderParams );
+
+  // }
+}
+//handleButtonFullscreen
+
 function getFullscreenElement() {
 
   return document.fullscreenElement;
@@ -119,39 +168,9 @@ function setSlider() {
   elButtonPrev.disabled = true;
   elNumbers.innerHTML = `${currentSlide + 1}/${elSlide.length}`;
 
-  elButtonPrev.addEventListener( 'click', e => {
-
-    if(e.target.matches( '.prev, .left' )) {
-
-      currentSlide --;
-      goTo -= 100;
-
-      goPrev( sliderParams, currentSlide, goTo );
-    }
-
-  });
-
-  elButtonNext.addEventListener( 'click', ( e ) => {
-
-    if(e.target.matches( '.next, .right' )) {
-
-      currentSlide ++;
-      goTo += 100;
-      
-      goNext( sliderParams, currentSlide, goTo );
-    }
-
-  });
-
-  elButtonFullscreen.addEventListener( 'click', e => {
-
-    if(e.target.matches( '.slider-container-fs--button, .fs-in--icon, .fs-out--icon' )) {
-
-      toggleFullscreen( sliderParams );
-
-    }
-
-  });
+  elButtonPrev.addEventListener( 'click', handleButtonPrev( sliderParams, currentSlide, goTo ));
+  elButtonNext.addEventListener( 'click', handleButtonNext( sliderParams, currentSlide, goTo ));
+  elButtonFullscreen.addEventListener( 'click', handleButtonFullscreen);
   
 }
 //slider()
